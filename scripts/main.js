@@ -1,15 +1,15 @@
 let myHTML = document.querySelector('html');
 myHTML.onclick = function() {
- alert('别戳我，我怕疼。');
+ alert('飞宇最帅！！！');
 };
 
 let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute('src', 'images/firefox2.png');
+      myImage.setAttribute('src', 'images/feiyu1.png');
     } else {
-      myImage.setAttribute('src', 'images/firefox-icon.png');
+      myImage.setAttribute('src', 'images/feiyu2.png');
     }
 }
 
@@ -22,14 +22,14 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla 酷毙了，' + myName;
+    myHeading.textContent = '陈飞宇的老婆：' + myName+'你好！';
   }
 }
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
+  myHeading.textContent = '陈飞宇的老婆：' + storedName+'';
 }
 myButton.onclick = function() {
    setUserName();
