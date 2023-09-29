@@ -32,11 +32,8 @@
         <div class="city"><img src="img/city.png" alt="" /></div>
         <img src="img/moon.png" alt="" id="moon" style="visibility: hidden;" />
         <div style="display:none">
-            <div class="shape">丁辉中秋节快乐</div>
-            <!-- <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div> -->
+            <div class="shape">中秋节快乐</div>
+            <div class="shape">丁辉</div>
         </div>
 
     </div>
@@ -50,6 +47,19 @@
         ocas.height = canvas.height = 700;
         var bigbooms = [];
 
+    // 自适应Canvas大小
+    function resizeCanvas() {
+        ocas.width = canvas.width = window.innerWidth;
+        ocas.height = canvas.height = window.innerHeight;
+    }
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', resizeCanvas);
+
+    window.onload = function () {
+        resizeCanvas();
+        initAnimate();
+    }
         window.onload = function () {
             initAnimate()
         }
@@ -265,7 +275,7 @@
             else {
                 var text = ele.innerHTML;
                 context.save();
-                var fontSize = 200;
+                var fontSize = 100;
                 context.font = fontSize + "px 宋体 bold";
                 context.textAlign = "center";
                 context.textBaseline = "middle";
